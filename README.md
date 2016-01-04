@@ -4,7 +4,7 @@ Puts people into houses based on ranking.
 ### Example usage
 `python hat.py [candidates file] [houses file] [house max capacity]`
 
-> House max capacity can be set to number of houses / number of candidates
+> House max capacity can be set to number of candidates / number of houses
 
 ```
 python hat.py candidates.csv house_leaders.csv 3                                           ~/chtle/Git/VSA-House-Choice-Voting 1
