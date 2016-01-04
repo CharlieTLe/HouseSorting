@@ -25,11 +25,19 @@ with open(houses_filename) as csvfile:
 
 # Place each candidate into a house based on their preferences
 with open(candidate_filename) as csvfile:
-	people = csv.DictReader(csvfile)
-	for person in people.shuffle():
-		# Flag whether person got placed into a house or not.
+	reader = csv.DictReader(csvfile)
+	people = []
+
+	# Read in all of the people for later randominzation in the next step
+	for row in reader:
+		people.append(row)
+	
+	# Randomizes the order that the people are taken in to be put into houses
+	random.shuffle(people)
+	for person in people:
+		# Flag whether person got placed into a house or not
 		foundHouse = False
-		# The preference of the choice. The lower the better.
+		# The preference of the choice. The lower the better
 		choiceRank = 0
 
 		# Try each choice the person has to place them into a house
@@ -38,7 +46,7 @@ with open(candidate_filename) as csvfile:
 
 			# Don't put person in house if it's full!
 			if len(houses[choice]['members']) < MAX_HOUSE_CAPACITY:
-				assert houses[choice]['id'] == choice, "Bad houses"
+				assert houses[choice]['id'] == choice_str, "Bad houses"
 				person['choice_rank'] = choiceRank
 				houses[choice]['members'].append(person)
 				foundHouse = True
