@@ -60,9 +60,21 @@ Candidates.csv
 - _choices_: Space separated string of house ids that are ranked in order of preference.
 ```
 name,choices
-Charlie Le,0 1 2
-Austina Nguyen,0 1 2
-Annie Nguyen,0 1 2
+Charlie Le,2 5 3 4 0 1
+Austina Nguyen,0 1 2 3 4 5
+Annie Nguyen,0 3 5 1 2 4
+Jonathan Lai,5 4 3 2 1 0
+Khoa Truong,2 5 4 1 0 3
+Kevin Hoang,5 3 0 1 2 4
+Christine Phan,0 5 3 1 4 2
+Baotuan Nguyen,3 5 2 1 4 0
+Ryan Le,5 2 0 1 3 4
+Cathy Quach,4 1 5 2 3 0
+Vi Nguyen,2 3 1 5 0 4
+Khoa Doan,3 5 1 2 0 4
+Derrick Nguyen,3 1 4 0 2 5
+Sharon Trang,3 4 1 0 5 2
+Matthew Nguyen,0 1 5 2 3 4
 ```
 
 House_Leaders.csv
@@ -74,5 +86,7 @@ id,leader_name,house_name
 0,Huy Nguyen,Cancer
 1,Jenny Lai,Taurus
 2,Violet Nguyen,Aries
-3,Christine Phan,Scorpio
+3,Daniel Ngo,Scorpio
+4,Kathy Nguyen,Sagittarius
+5,Chi Nguyen,Gemini
 ```
